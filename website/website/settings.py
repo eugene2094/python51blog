@@ -36,8 +36,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'helloweb',
-    'blog'
+    'blog',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'gallery',
+    'easy_thumbnails',
+    # 'accounts'
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -121,3 +129,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+LOGIN_URL = 'blog_login'
+# LOGOUT_URL = 'blog_logout'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = "home"
+
+# AUTH_USER_MODEL = 'accounts.User'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/'
