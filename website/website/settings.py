@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'gallery',
     'easy_thumbnails',
+    'shop',
+    'cart',
     # 'accounts'
 ]
 
@@ -139,3 +141,5 @@ LOGOUT_REDIRECT_URL = "home"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/media/'
+
+CART_SESSION_ID = 'cart'

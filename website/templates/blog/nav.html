@@ -31,7 +31,11 @@
                     <li>
                         <a href="{% url 'gallery' %}">Gallery</a>
                     </li>
-                </ul>
+
+                <li>
+                    <a href="{% url 'cart:cart_detail' %}">Cart {{ cart|length }}</a>
+                </li>
+                    </ul>
                 {% include 'registration/toggle_login.html' %}
             </div>
             <!-- /.navbar-collapse -->
